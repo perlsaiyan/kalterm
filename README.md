@@ -1,11 +1,21 @@
 # Kalterm
 A simple visualization from the terminal of tintin++ bot status.
+
+It uses kalterm.tin (in the tintin directory) to create a #port
+session on 9595, after which the kalterm cli app can connect and begin
+receiving data.  The graphs are pre-defined for now.  The Log window can be
+populated by running `kalterm_msg <log message to send>` in tintin++.
+
 ![Screenshot](/screenshots/example.gif)
 
-It uses kalterm.tin to create a #port session on 9595, after which the 
-kalterm cli app can connect and begin receiving data.  The graphs are
-pre-defined for now.  The Log window can be populated by running
-`kalterm_msg <log message to send>` in tintin++.
+The dark blue line in the line charts are projections for hourly rates
+based on previous one minute interval.  The white line represents 
+actual gains over the previous hour.
+
+The pie chart is progression along the current #path.  In the example,
+we're always at step one with a shrinking path size because of how
+the bot works in that particular area (remapping path from every step,
+because mobs can move the player off path).
 
 # Links
 [Tintin++](https://tintin.mudhalla.net)
