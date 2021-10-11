@@ -1,0 +1,45 @@
+#nop -- kalterm tintin routines
+#class kalterm kill
+#class kalterm open
+
+#tab kalterm_port
+#alias kalterm_port {
+    #if {"%1" == "init"} {
+        #line quiet #gts #port init kalterm 9595
+    };
+    #elseif {"%1" == "off"} {
+        #zap kalterm
+    }
+}
+
+#alias kalterm_send {
+    #kalterm #port send all %0
+}
+
+#alias kalterm_xp {
+    kalterm_send \{"experience": \{"current": $MSDP_EXPERIENCE}}
+}
+
+#alias kalterm_gold {
+    kalterm_send \{"gold": \{"current": $MSDP_GOLD}}
+}
+
+#alias kalterm_msg {
+    #var message %0;
+    #replace message {"} {\\"};
+    kalterm_send \{"message": \{"text": "$message"}}
+}
+
+#alias kalterm_position {
+    #path get length pathlen;
+    #path get position pathpos;
+    #var report \{"location": \{"path": "${qzone}", "length": $pathlen, "position": $pathpos}};
+    kalterm_send $report
+}
+
+#tick {kalterm} {kalterm_position;kalterm_gold;kalterm_xp} {1}
+#act {^You grouptell: Hold for} {
+    kalterm_msg Running Baramon as Sateen, group size &MSDP_GROUP[], @hNum{$MSDP_GOLD} gold on hand, @hNum{$MSDP_EXPERIENCE} experience
+} 
+
+#class kalterm close
