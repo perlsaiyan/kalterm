@@ -194,7 +194,7 @@ func playGoldChart(ctx context.Context, lc *linechart.LineChart, delay time.Dura
 					goldByHour = append(xpByHour, x/float64(1000000.00))
 				}
 			} else {
-				goldByHour = append(xpByHour, 0)
+				goldByHour = append(goldByHour, 0)
 			}
 
 			if err := lc.Series("extrap", goldByMinute,
