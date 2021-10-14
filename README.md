@@ -1,6 +1,6 @@
 # Kalterm
 [![GitHub Super-Linter](https://github.com/perlsaiyan/kalterm/workflows/Lint/badge.svg)](https://github.com/marketplace/actions/super-linter)
-[![Build Check](https://github.com/perlsaiyan/kalterm/workflows/golang-pipline/badge.svg)](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+[![Build Check](https://github.com/perlsaiyan/kalterm/workflows/golang-pipeline/badge.svg)](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
 
 A simple visualization from the terminal of tintin++ bot status.
 
