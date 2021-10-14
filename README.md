@@ -1,4 +1,6 @@
 # Kalterm
+[![GitHub Super-Linter](https://github.com/<OWNER>/<REPOSITORY>/workflows/Lint/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
 A simple visualization from the terminal of tintin++ bot status.
 
 It uses kalterm.tin (in the tintin directory) to create a #port
