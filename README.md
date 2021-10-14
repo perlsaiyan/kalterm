@@ -1,5 +1,5 @@
 # Kalterm
-[![GitHub Super-Linter](https://github.com/<OWNER>/<REPOSITORY>/workflows/Lint/badge.svg)](https://github.com/marketplace/actions/super-linter)
+[![GitHub Super-Linter](https://github.com/perlsaiyan/kalterm/workflows/Lint/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
 A simple visualization from the terminal of tintin++ bot status.
 
